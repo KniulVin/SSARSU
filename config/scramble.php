@@ -29,7 +29,7 @@ return [
         /*
          * Description rendered on the home page of the API documentation (`/docs/api`).
          */
-        'description' => 'API del sistema del Sistema de Seguimiento de Actividades de RSU - UNASAM.',
+        'description' => 'API del Sistema de Seguimiento de Actividades de RSU - UNASAM.',
     ],
 
     /*
