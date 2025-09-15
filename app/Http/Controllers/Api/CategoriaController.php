@@ -69,14 +69,6 @@ class CategoriaController extends Controller
      */
     public function show($id)
     {
-        if (!ctype_digit($id) || (int)$id < 1) {
-            return response()->json([
-                'status' => 'error',
-                'message' => 'Id inválido',
-                'errors' => ['id' => ['El id debe ser un entero positivo']]
-            ], 422);
-        }
-
         try {
             $categoria = $this->service->obtener($id);
 
@@ -98,13 +90,6 @@ class CategoriaController extends Controller
      */
     public function update(UpdateCategoriaRequest $request, $id)
     {
-        if (!ctype_digit($id) || (int)$id < 1) {
-            return response()->json([
-                'status' => 'error',
-                'message' => 'Id inválido',
-                'errors' => ['id' => ['El id debe ser un entero positivo']]
-            ], 422);
-        }
         try {
 
             $categoria = $this->service->actualizar($id, $request->validated());

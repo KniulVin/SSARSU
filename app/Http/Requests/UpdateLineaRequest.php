@@ -11,7 +11,7 @@ class UpdateLineaRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,8 @@ class UpdateLineaRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'nombre' => 'sometimes|required|string|max:255|unique:lineas,nombre,' . $this->route('linea'),
+            'descripcion' => 'sometimes|required|string',
         ];
     }
 }
