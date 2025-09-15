@@ -11,7 +11,7 @@ class UpdateCategoriaRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,8 @@ class UpdateCategoriaRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'nombre' => 'sometimes|required|string|max:100|unique:categorias,nombre,' . $this->route('categoria'),
+            'descripcion' => 'sometimes|required|string|max:255',
         ];
     }
 }
