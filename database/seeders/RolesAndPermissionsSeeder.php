@@ -52,8 +52,10 @@ class RolesAndPermissionsSeeder extends Seeder
         $administrador = User::firstOrCreate(
             ['email' => 'administrador@example.com'],
             [
-                'name' => 'Administrador User',
-                'password' => Hash::make('12345678')
+                'dni' => '76345678',
+                'nombres' => 'Administrador User',
+                'apellidos' => 'Administrador User',
+                'password' => Hash::make('12345678'),
             ]
         );
         $administrador->assignRole($administradorRole);
@@ -62,7 +64,9 @@ class RolesAndPermissionsSeeder extends Seeder
         $supervisor = User::firstOrCreate(
             ['email' => 'supervisor@example.com'],
             [
-                'name' => 'Supervisor User',
+                'dni' => '76345677',
+                'nombres' => 'Supervisor User',
+                'apellidos' => 'Supervisor User',
                 'password' => Hash::make('12345678')
             ]
         );
@@ -72,7 +76,9 @@ class RolesAndPermissionsSeeder extends Seeder
         $ejecutor = User::firstOrCreate(
             ['email' => 'ejecutor@example.com'],
             [
-                'name' => 'Ejecutor User',
+                'dni' => '76345676',
+                'nombres' => 'Ejecutor User',
+                'apellidos' => 'Ejecutor User',
                 'password' => Hash::make('12345678')
             ]
         );
@@ -82,7 +88,9 @@ class RolesAndPermissionsSeeder extends Seeder
         $organizador = User::firstOrCreate(
             ['email' => 'organizador@example.com'],
             [
-                'name' => 'Organizador User',
+                'dni' => '76345675',
+                'nombres' => 'Organizador User',
+                'apellidos' => 'Organizador User',
                 'password' => Hash::make('12345678')
             ]
         );
@@ -93,7 +101,9 @@ class RolesAndPermissionsSeeder extends Seeder
         $user1 = User::firstOrCreate(
             ['email' => 'special1@example.com'],
             [
-                'name' => 'Special User 1',
+                'dni' => '76345674',
+                'nombres' => 'Special User 1',
+                'apellidos' => 'Special User 1',
                 'password' => Hash::make('12345678')
             ]
         );
@@ -103,7 +113,9 @@ class RolesAndPermissionsSeeder extends Seeder
         $user2 = User::firstOrCreate(
             ['email' => 'special2@example.com'],
             [
-                'name' => 'Special User 2',
+                'dni' => '76345673',
+                'nombres' => 'Special User 2',
+                'apellidos' => 'Special User 2',
                 'password' => Hash::make('12345678')
             ]
         );
