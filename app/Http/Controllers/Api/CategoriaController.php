@@ -7,7 +7,6 @@ use App\Http\Requests\UpdateCategoriaRequest;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\IndexCategoriaRequest;
 use App\Services\CategoriaService;
-use Exception;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class CategoriaController extends Controller
